@@ -1,4 +1,4 @@
-name: Test - Exists both branches, different steps on each branch
+name: Test - Exists both branches, different steps for each branch
 
 on:
   workflow_dispatch:
