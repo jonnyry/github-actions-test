@@ -1,4 +1,4 @@
-name: Test - Exists and same on both branches
+name: Manual - Main branch only
 
 on:
   workflow_dispatch:
