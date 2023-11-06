@@ -1,7 +1,7 @@
-name: Test - Exists and same on both branches
+name: On push - Develop branch only
 
-on:
-  workflow_dispatch:
+on: 
+  push
   
 jobs:
   test_action:
