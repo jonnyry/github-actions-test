@@ -1,4 +1,4 @@
-name: Manual - Develop branch only
+name: 2b) Manual - Develop branch only
 
 on:
   workflow_dispatch:

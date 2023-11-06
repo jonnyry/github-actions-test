@@ -1,4 +1,4 @@
-name: Manual - Both branches, different content
+name: 3) Manual - Both branches, different content
 
 on:
   workflow_dispatch:
