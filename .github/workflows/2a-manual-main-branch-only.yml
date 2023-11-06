@@ -1,4 +1,4 @@
-name: Manual - Main branch only
+name: 2a) Manual - Main branch only
 
 on:
   workflow_dispatch:
