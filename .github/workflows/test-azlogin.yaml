@@ -2,36 +2,29 @@
 
 on: workflow_dispatch
 
-name: 5) Test AzureLoginSample
+name: 5) Test masking log output
 
 jobs:
 
-  build-and-deploy:
+  job1:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
     - run: |
-        echo "::add-mask::${{ secrets.AAD_TENANT_NAME }}"
-        az account show
-        az webapp list --query "[?state=='Running']"
+        echo "This is A PUBLIC STRING"
+        echo "This is MY PRIVATE STRING"
+        echo "Adding mask for MY PRIVATE STRING..."
+        echo "::add-mask::MY PRIVATE STRING"
+        echo "This is A PUBLIC STRING"
+        echo "This is MY PRIVATE STRING"
 
     - run: |
-        az account show
-        az webapp list --query "[?state=='Running']"
+        echo "This is My private string"
 
-  build-and-deploy2:
+  job2:
     runs-on: ubuntu-latest
     steps:
     
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
     - run: |
-        az account show
-        az webapp list --query "[?state=='Running']"
-
+        echo "This is A PUBLIC STRING"
+        echo "This is MY PRIVATE STRING"
