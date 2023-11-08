@@ -19,7 +19,7 @@ jobs:
         echo "This is MY PRIVATE STRING"
 
     - run: |
-        echo "This is My private string"
+        echo "This is MY PRIVATE STRING"
 
   job2:
     runs-on: ubuntu-latest
