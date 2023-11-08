@@ -2,7 +2,7 @@
 
 on: workflow_dispatch
 
-name: AzureLoginSample
+name: 5) Test AzureLoginSample
 
 jobs:
 
@@ -15,4 +15,5 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - run: |
+        az account show
         az webapp list --query "[?state=='Running']"
