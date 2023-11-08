@@ -15,5 +15,6 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - run: |
+        echo "::add-mask::${{ secrets.AAD_TENANT_NAME }}"
         az account show
         az webapp list --query "[?state=='Running']"
