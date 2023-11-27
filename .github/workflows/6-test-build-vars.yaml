@@ -11,13 +11,11 @@ jobs:
     steps:
     
     - run: |
-        echo ${GITHUB_REPOSITORY}
+        echo GITHUB_REPOSITORY = ${GITHUB_REPOSITORY}
         echo ${GITHUB_REPOSITORY#*/}
-        echo ${GITHUB_REF#refs/heads/}
-        echo ${GITHUB_SHA:0:7}
-        echo $(date '+%Y-%m-%dT%H:%M:%S')
-        # echo "BUILD_TAG=\"${GITHUB_REPOSITORY#*/} | Branch ${GITHUB_REF#refs/heads/} | SHA ${GITHUB_SHA:0:7} | BuildTime $(date '+%Y-%m-%dT%H:%M:%S')\"" >> $GITHUB_ENV
-        # echo ${{ env.BUILD_TAG }}
+        echo GITHUB_REF = ${GITHUB_REF#refs/heads/}
+        echo GITHUB_SHA = ${GITHUB_SHA:0:7}
+        echo BUILD_DATE = $(date '+%Y-%m-%dT%H:%M:%S')
 
   read-some-vars:
     runs-on: ubuntu-latest
