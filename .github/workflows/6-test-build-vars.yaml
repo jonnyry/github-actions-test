@@ -1,0 +1,23 @@
+# File: .github/workflows/workflow.yml
+
+on: workflow_dispatch
+
+name: 6) Test build vars
+
+jobs:
+
+  create-some-vars:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - run: |
+        echo "BUILD_TAG=\"${GITHUB_REPOSITORY#*/} | Branch ${GITHUB_REF#refs/heads/} | SHA ${GITHUB_SHA:0:7} | BuildTime $(date '+%Y-%m-%dT%H:%M:%S')\"" >> $GITHUB_ENV
+        echo ${{ env.BUILD_TAG }}
+
+  read-some-vars:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - run: |
+        echo "This is A PUBLIC STRING"
+        echo "This is MY PRIVATE STRING"
