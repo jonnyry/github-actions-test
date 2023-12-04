@@ -5,7 +5,6 @@ on:
   schedule:
     # run every 5 minutes https://crontab.guru/#*/5_*_*_*_*
     - cron: "*/5 * * * *"
-  workflow_dispatch:
   
 jobs:
   test_action:
