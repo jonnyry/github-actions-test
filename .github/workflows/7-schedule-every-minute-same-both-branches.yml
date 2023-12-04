@@ -3,8 +3,8 @@ name: 7) Schedule every minute - same both branches
 on:
 # Make sure you disable this action pretty quick! 
   schedule:
-    # run every minute https://crontab.guru/#*/1_*_*_*_*
-    - cron: "*/1 * * * *"
+    # run every minute https://crontab.guru/#*/5_*_*_*_*
+    - cron: "*/5 * * * *"
   workflow_dispatch:
   
 jobs:
