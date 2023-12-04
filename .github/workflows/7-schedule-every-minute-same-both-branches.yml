@@ -1,4 +1,4 @@
-name: 7) Schedule every minute - same both branches
+name: 7) Schedule every 5 minutes - same both branches
 
 on:
 # Make sure you disable this action pretty quick! 
