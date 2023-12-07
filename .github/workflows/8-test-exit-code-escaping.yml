@@ -20,5 +20,5 @@ jobs:
 
           echo Value of ec is $ec
 
-          exit $ec
+          (exit $ec)
 
