@@ -1,0 +1,17 @@
+name: 8) Test exit code escaping
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  test_action:
+    name: Test Action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup BUILD_TAG environment variable
+        run: |
+          for i in {1..3}; do
+            echo hello && ec=0 && break || ec=\$? && sleep 10
+          done
+
+          (exit \$ec)
