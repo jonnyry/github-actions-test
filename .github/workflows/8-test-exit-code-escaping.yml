@@ -11,7 +11,7 @@ jobs:
       - name: Setup BUILD_TAG environment variable
         run: |
           for i in {1..3}; do
-            asasas && ec=0 && break || ec="$?"
+            echo a && ec=0 && break || ec="$?"
           done
 
           echo Value of ec is $ec
