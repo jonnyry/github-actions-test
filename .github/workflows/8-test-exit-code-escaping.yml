@@ -14,4 +14,10 @@ jobs:
             echo hello && ec=0 && break || ec=$?
           done
 
+          echo Value of ec is $ec
+
+          asjijiasjias || ec=$?
+
+          echo Value of ec is $ec
+
           (exit $ec)
