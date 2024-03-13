@@ -1,4 +1,4 @@
-name: 8) Test expressions
+name: 9) Test expressions
 
 on:
   workflow_dispatch:
@@ -13,9 +13,9 @@ jobs:
         with:
           creds: |
             {
-              "clientId": "abc",
-              "clientSecret": "def",
-              "subscriptionId": "ghi",
-              "tenantId": "jkl"
+              "clientId": ${{ secret.TEST_CLIENT_ID }},
+              "clientSecret": ${{ secret.TEST_CLIENT_SECRET }},
+              "subscriptionId": "${{ secret.TEST_SUBSCRIPTION }},
+              "tenantId": ${{ secret.TEST_TENANT_ID }}
             }
   
