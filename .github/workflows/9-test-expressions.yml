@@ -1,0 +1,14 @@
+name: 8) Test expressions
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  test_action:
+    name: Test Action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds:  ${{ '{ "clientId" : "abc" }' }}
