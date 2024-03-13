@@ -11,4 +11,11 @@ jobs:
       - name: Azure login
         uses: azure/login@v2
         with:
-          creds:  ${{ '{ "clientId" : "abc" }' }}
+          creds: |
+            {
+              "clientId": "abc",
+              "clientSecret": "def",
+              "subscriptionId": "ghi",
+              "tenantId": "jkl"
+            }
+  
